@@ -6,7 +6,7 @@
 </head>
 <body>
 <h1>Trip Record</h1>
-<form id="questionnaire">
+<form name = "questionnaire" id="questionnaire" action="index.html">
   <div id="questionBlock">
     <label for="country">What country did you travel?</label>
     <input type="text" name="country" id="country">
@@ -30,16 +30,41 @@
       <input type="date" name="end" id="end">
     </div>
   </div>
-  <button type="button" id="formButton" onclick ="showConfirm()">Edit</button>
+  <button type="submit" id="formButton" onclick ="return check()">Edit</button>
 </form>
 <script>
-  function showConfirm(){
+  function check(){
+    var country = document.questionnaire.country;
+    if(country.value == ""){
+      alert("Input country");
+      country.focus();
+      return false;
+    }
+
+    var city = document.questionnaire.city;
+    if(city.value == ""){
+      alert("Input city");
+      city.focus();
+      return false;
+    }
+
+    var startDate = document.questionnaire.start;
+    var endDate = document.questionnaire.end;
+    if (startDate.value == "" || endDate.value == "") {
+      alert("Please enter both start and end dates.");
+      return false;
+    }
+    if(startDate.value > endDate.value){
+      alert("Start date should be faster then the end date.");
+      return false;
+    }
+
     if(confirm("Do you want to modify your record?")){
       alert("Modified");
     }else{
       alert("Cancelled");
     }
-    window.location.href = 'index.html';
+    return true;
   }
 </script>
 </body>

@@ -6,11 +6,11 @@
 </head>
 <body>
 <h1>Trip Record</h1>
-<form id="questionnaire">
+<form name = "questionnaire" id="questionnaire" action="index.html">
     <div id="questionBlock">
         <label for="country">What country did you travel?</label>
         <input type="text" name="country" id="country">
-        <label for="country">Which cities did you visit?</label>
+        <label for="city">Which cities did you visit?</label>
         <input type="text" name="city" id="city">
         <label for="companion">Who did you travel with?</label>
         <input type="text" name="companion" id="companion">
@@ -30,12 +30,37 @@
             <input type="date" name="end" id="end">
         </div>
     </div>
-    <button type="button" id="formButton" onclick ="showAlert()">Record</button>
+    <button type="submit" id="formButton" onclick ="return check()">Record</button>
 </form>
 <script>
-    function showAlert(){
+    function check(){
+        var country = document.questionnaire.country;
+        if(country.value == ""){
+            alert("Input country");
+            country.focus();
+            return false;
+        }
+
+        var city = document.questionnaire.city;
+        if(city.value == ""){
+            alert("Input city");
+            city.focus();
+            return false;
+        }
+
+        var startDate = document.questionnaire.start;
+        var endDate = document.questionnaire.end;
+        if (startDate.value == "" || endDate.value == "") {
+            alert("Please enter both start and end dates.");
+            return false;
+        }
+        if(startDate.value > endDate.value){
+            alert("Start date should be faster then the end date.");
+            return false;
+        }
+
         alert("New Record Added");
-        window.location.href = 'index.html';
+        return true;
     }
 </script>
 </body>
