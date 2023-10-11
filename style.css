@@ -63,6 +63,28 @@ input[type="text"]:focus {
     width: 95%;
 }
 
-.card-deck{
-    margin: 0 auto;
+#formCheckBox{
+    margin-bottom: 6px;
 }
+
+input[type="date"]  {
+    display: inline-block;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    transition: border-color 0.3s ease-in-out;
+}
+
+#formCheckBox label {
+    display: inline-block;
+}
+
+#formStart label{
+    display: inline-block;
+}
+
+#formEnd label{
+    display: inline-block;
+}
+

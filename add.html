@@ -12,8 +12,30 @@
         <input type="text" name="country" id="country">
         <label for="country">Which cities did you visit?</label>
         <input type="text" name="city" id="city">
+        <label for="companion">Who did you travel with?</label>
+        <input type="text" name="companion" id="companion">
+        <label>What did you do?</label>
+        <div id="formCheckBox">
+            <label><input type="checkbox" name="content" value="sightseeing"> Sight Seeing</label>
+            <label><input type="checkbox" name="content" value="activity"> Activity</label>
+            <label><input type="checkbox" name="content" value="relaxation"> Relaxation</label>
+        </div>
+        <label>When did you travel?</label>
+        <div id="formStart">
+            <label for="start">Start date</label>
+            <input type="date" name="start" id="start">
+        </div>
+        <div id="formEnd">
+            <label for="end">End  date</label>
+            <input type="date" name="end" id="end">
+        </div>
     </div>
-    <button type="button" id="formButton" onclick ="location.href='index.html'">Record</button>
+    <button type="button" id="formButton" onclick ="showAlert()">Record</button>
 </form>
-<script src="script.js"></script>
+<script>
+    function showAlert(){
+        alert("New Record Added");
+        window.location.href = 'index.html';
+    }
+</script>
 </body>
