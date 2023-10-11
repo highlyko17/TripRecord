@@ -39,14 +39,14 @@ input[type="text"] {
 
 input[type="text"]:focus {
     outline: none;
-    border-color: #4CAF50;
+    border-color: dodgerblue;
 }
 
 #formButton {
     display: block;
     width: 100%;
     padding: 12px;
-    background-color: #4CAF50;
+    background-color: cornflowerblue;
     color: #fff;
     border: none;
     border-radius: 5px;
@@ -54,8 +54,8 @@ input[type="text"]:focus {
     transition: background-color 0.3s ease-in-out;
 }
 
-#formButton {
-    background-color: #45a049;
+#formButton:hover {
+    background-color: lightskyblue;
 }
 
 #questionBlock {

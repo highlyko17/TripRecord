@@ -2,18 +2,23 @@
 <html>
 <head>
   <title>Trip Record</title>
-  <link rel="stylesheet" type="text/css" href="style.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet_1" type="text/css" href="style.css">
 </head>
 <body>
-<h1>Trip Record</h1>
-<form id="questionnaire">
-  <div id="questionBlock">
-    <label for="country">What country did you travel?</label>
-    <input type="text" name="country" id="country">
-    <label for="country">Which cities did you visit?</label>
-    <input type="text" name="city" id="city">
+  <div class="card mb-3" style="width: 50vw; margin: 0 auto; margin-top: 1%;">
+    <img class="card-img-top" src="images/southkorea.jpg" alt="Card image cap">
+    <div class="card-body">
+      <h5 class="card-title">South Korea</h5>
+      <p class="card-text"> Busan and Pohang</p>
+    </div>
+    <ul class="list-group list-group-flush">
+      <li class="list-group-item">Sight-seeing</li>
+      <li class="list-group-item">With mom</li>
+      <li class="list-group-item">October 10-11, 2022</li>
+    </ul>
+    <div class="card-body">
+      <a href="index.html" class="card-link">LIST</a>
+    </div>
   </div>
-  <button type="button" id="formButton" onclick ="location.href='index.html'">Record</button>
-</form>
-<script src="script.js"></script>
 </body>
